@@ -246,3 +246,19 @@ select {
   margin-top: 25px;
 }
 /* End Info section styling */
+
+/* Footer Styling */
+.footer {
+  height: 442px;
+  background-color: #2c2c2c;
+  padding: 75px 100px;
+  color: white;
+}
+
+.footer-logo h1 {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.footer-logo p {max-width: 370px;}
+/* End Footer Styling */

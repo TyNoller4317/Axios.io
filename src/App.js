@@ -3,6 +3,7 @@ import { Navbar } from "./components/Navbar";
 import { HeroSection } from "./components/HeroSection";
 import { MakesUsSpecial } from "./components/MakesUsSpecial";
 import { InfoSection } from "./components/InfoSection";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <MakesUsSpecial />
       <InfoSection />
+      <Footer />
     </>
   );
 }
