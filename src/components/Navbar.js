@@ -1,12 +1,12 @@
 import React from "react";
-import styled from "styled-components";
+import { NavContainer, LogoHolder, Nav } from "./styling/Navbar.styled";
 
 export const Navbar = () => {
   return (
-    <div className="nav-container">
-      <div className="logo-holder">
+    <NavContainer>
+      <LogoHolder>
         <h1>Axios.io</h1>
-      </div>
+      </LogoHolder>
       <nav className="nav">
         <ul>
           <li>
@@ -23,6 +23,6 @@ export const Navbar = () => {
           </li>
         </ul>
       </nav>
-    </div>
+    </NavContainer>
   );
 };

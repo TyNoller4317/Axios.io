@@ -1,0 +1,47 @@
+import styled from "styled-components";
+
+export const SpecialContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 100px;
+  margin-top: 150px;
+`;
+
+export const SpecialText = styled.div`
+  & > h2 {
+    font-size: 34px;
+    max-width: 275px;
+  }
+
+  & > p {
+    color: #767676;
+    max-width: 80%;
+    margin-top: 10px;
+  }
+`;
+
+export const SpecialCard = styled.div`
+  width: 292px;
+  height: 363px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > h1 {
+    align-self: flex-start;
+    margin-left: 35px;
+    margin-top: 50px;
+  }
+
+  & > img {
+    width: 50%;
+  }
+
+  &:nth-child(3) {
+    margin-top: 50px;
+  }
+`;

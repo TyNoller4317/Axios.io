@@ -1,23 +1,29 @@
 import React from "react";
 import HeroImage from "../images/hero.svg";
+import {
+  HeroSectionContainer,
+  LeftSide,
+  RightSide,
+} from "./styling/HeroSection.styled";
+import { Button } from "./Button";
 
 export const HeroSection = () => {
   return (
     <>
-      <div className="hero-container">
-        <div className="left-side">
+      <HeroSectionContainer>
+        <LeftSide>
           <h1>Making tasks easier for everyday individuals</h1>
           <p>
             We have developed a task application that helps individuals plan and
             execute important tasks. Our task editor is number one when it comes
             useability and friendliness.
           </p>
-          <button className="hero-btn">Learn More</button>
-        </div>
-        <div className="right-side">
+          <Button value="Learn More" styleClass="btn-large" />
+        </LeftSide>
+        <RightSide>
           <img src={HeroImage} alt="Hero Image" />
-        </div>
-      </div>
+        </RightSide>
+      </HeroSectionContainer>
     </>
   );
 };
