@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HeroImage from "../images/hero.svg";
 import {
   HeroSectionContainer,
@@ -18,7 +19,9 @@ export const HeroSection = () => {
             execute important tasks. Our task editor is number one when it comes
             useability and friendliness.
           </p>
-          <Button value="Learn More" styleClass="btn-large" />
+          <Link to="/about">
+            <Button value="Learn More" styleClass="btn-large" />
+          </Link>
         </LeftSide>
         <RightSide>
           <img src={HeroImage} alt="Hero Image" />

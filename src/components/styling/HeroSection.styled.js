@@ -23,6 +23,18 @@ export const LeftSide = styled.div`
     margin-top: 15px;
     max-width: 445px;
   }
+
+  @media screen and (max-width: 960px) {
+    & > h1 {
+      font-size: 42px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    & > p {
+      text-align: center;
+    }
+  }
 `;
 
 export const RightSide = styled.div`
@@ -32,5 +44,10 @@ export const RightSide = styled.div`
 
   @media screen and (max-width: 960px) {
     margin-top: 50px;
+
+    & > img {
+      margin: 0 auto;
+      width: 100%;
+    }
   }
 `;

@@ -64,6 +64,10 @@ export const FooterSubscribe = styled.div`
   &:hover::after {
     opacity: 0.75;
   }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 
 export const FooterLinks = styled.div`

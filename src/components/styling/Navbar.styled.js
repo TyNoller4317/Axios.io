@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   height: 80px;
@@ -21,15 +22,21 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 100px;
+
+  @media screen and (max-width: 960px) {
+    padding: 0 25px;
+  }
 `;
 
-export const NavLogo = styled.h1`
+export const NavLogo = styled(Link)`
   color: #000;
   justify-self: flex-start;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-weight: 800;
+  text-decoration: none;
+  font-size: 24px;
 `;
 
 export const MobileIcon = styled.div`
@@ -61,7 +68,7 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
-export const NavLinks = styled.a`
+export const NavLinks = styled(Link)`
   color: #727272;
   display: flex;
   align-items: center;

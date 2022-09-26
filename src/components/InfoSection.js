@@ -3,6 +3,7 @@ import TestImg from "../images/hero.svg";
 import TestImg2 from "../images/info1.png";
 import TestImg3 from "../images/info2.png";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
 import {
   InfoContainer,
@@ -21,7 +22,9 @@ export const InfoSection = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit mauris,
             gravida senectus proin neque. Ultricies at urna non massa.
           </p>
-          <Button value="Learn More" styleClass="btn-small" />
+          <Link to="about">
+            <Button value="Learn More" styleClass="btn-small" />
+          </Link>
         </div>
       </div>
       <div className="info-bottom">
@@ -31,7 +34,9 @@ export const InfoSection = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit mauris,
             gravida senectus proin neque. Ultricies at urna non massa.
           </p>
-          <Button value="Learn More" styleClass="btn-small" />
+          <Link to="about">
+            <Button value="Learn More" styleClass="btn-small" />
+          </Link>
         </div>
         <img src={TestImg3} alt="" />
       </div>

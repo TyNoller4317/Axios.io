@@ -8,6 +8,8 @@ export const SpecialContainer = styled.div`
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
   }
 `;
 
@@ -25,6 +27,10 @@ export const SpecialText = styled.div`
 
   @media screen and (max-width: 960px) {
     margin-bottom: 25px;
+
+    & > p {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -51,5 +57,11 @@ export const SpecialCard = styled.div`
 
   &:nth-child(3) {
     margin-top: 50px;
+  }
+
+  @media screen and (max-width: 960px) {
+    &:nth-child(4) {
+      margin-top: 50px;
+    }
   }
 `;

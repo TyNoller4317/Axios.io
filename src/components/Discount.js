@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 import {
   DiscountContainer,
   DiscountText,
@@ -22,8 +23,12 @@ export const Discount = () => {
           egestas urna arcu sed consequat.
         </p>
         <ButtonContainer>
-          <Button value="Learn More" styleClass="btn-small" />
-          <Button value="Discount" styleClass="btn-clear" />
+          <Link to="about">
+            <Button value="Learn More" styleClass="btn-small" />
+          </Link>
+          <Link to="discount-code">
+            <Button value="Discount" styleClass="btn-clear" />
+          </Link>
         </ButtonContainer>
       </DiscountText>
       <DiscountImg>

@@ -51,6 +51,10 @@ export const Changer = styled.div`
     left: 42%;
     top: 5%;
   }
+
+  @media screen and (max-width: 960px) {
+    margin: 50px 25px;
+  }
 `;
 
 export const Changer2 = styled.div`
@@ -73,6 +77,10 @@ export const Changer2 = styled.div`
     left: 0%;
     top: 5%;
   }
+
+  @media screen and (max-width: 960px) {
+    margin: 50px 25px;
+  }
 `;
 
 export const ServicesCardContainer = styled.div`
@@ -84,6 +92,9 @@ export const ServicesCardContainer = styled.div`
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
+    padding: 0;
+    align-items: center;
+    justify-items: center;
   }
 `;
 
@@ -117,5 +128,10 @@ export const ServicesCard = styled.div`
     max-width: 287px;
     align-self: flex-start;
     margin-left: 50px;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 350px;
+    height: 350px;
   }
 `;

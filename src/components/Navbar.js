@@ -8,6 +8,7 @@ import {
   NavItem,
   NavLinks,
 } from "./styling/Navbar.styled";
+import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 export const Navbar = ({ toggle }) => {
@@ -15,22 +16,23 @@ export const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo>Axios.io</NavLogo>
+          <NavLogo to="/">Axios.io</NavLogo>
+
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks>Home</NavLinks>
+              <NavLinks to="/">Home</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks>Services</NavLinks>
+              <NavLinks to="/services">Services</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks>About Us</NavLinks>
+              <NavLinks to="/about">About Us</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks>Contact</NavLinks>
+              <NavLinks to="/contact">Contact</NavLinks>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

@@ -11,7 +11,8 @@ export const DiscountContainer = styled.div`
   @media screen and (max-width: 960px) {
     flex-direction: column;
     height: 100%;
-    padding: 25px 0;
+    padding: 25px 25px;
+    text-align: center;
   }
 `;
 
@@ -34,4 +35,8 @@ export const ButtonContainer = styled.div``;
 
 export const DiscountImg = styled.div`
   margin-left: 150px;
+
+  @media screen and (max-width: 960px) {
+    margin: 0;
+  }
 `;
