@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TestImage from "../images/hero.svg";
+import Engineer from "../images/engineering.svg";
+import Drone from "../images/drone.svg";
 import {
   SpecialContainer,
   SpecialCard,
@@ -22,11 +24,11 @@ export const MakesUsSpecial = () => {
         <h1>Flexibility</h1>
       </SpecialCard>
       <SpecialCard>
-        <img src={TestImage} alt="" />
+        <img src={Drone} alt="" />
         <h1>Affordable</h1>
       </SpecialCard>
       <SpecialCard>
-        <img src={TestImage} alt="" />
+        <img src={Engineer} alt="" />
         <h1>Easy To Use</h1>
       </SpecialCard>
     </SpecialContainer>

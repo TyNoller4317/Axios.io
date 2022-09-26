@@ -5,6 +5,10 @@ export const SpecialContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   padding: 0 100px;
   margin-top: 150px;
+
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const SpecialText = styled.div`
@@ -17,6 +21,10 @@ export const SpecialText = styled.div`
     color: #767676;
     max-width: 80%;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-bottom: 25px;
   }
 `;
 

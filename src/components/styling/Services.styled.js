@@ -39,6 +39,7 @@ export const Changer = styled.div`
   margin: 50px 100px;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:after {
     content: "";
@@ -52,12 +53,38 @@ export const Changer = styled.div`
   }
 `;
 
+export const Changer2 = styled.div`
+  width: 40px;
+  height: 24px;
+  background: #ccd5ae;
+  border-radius: 50px;
+  margin: 50px 100px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #666b55;
+    border-radius: 50%;
+    left: 0%;
+    top: 5%;
+  }
+`;
+
 export const ServicesCardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0 100px;
   grid-gap: 15px;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const ServicesCard = styled.div`

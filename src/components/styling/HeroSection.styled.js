@@ -5,6 +5,10 @@ export const HeroSectionContainer = styled.div`
   padding: 0 100px;
   align-items: center;
   margin-top: 50px;
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftSide = styled.div`
@@ -24,6 +28,9 @@ export const LeftSide = styled.div`
 export const RightSide = styled.div`
   & > img {
     width: 68%;
-    float: right;
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-top: 50px;
   }
 `;

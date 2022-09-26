@@ -26,7 +26,7 @@ export const InfoSection = () => {
       </div>
       <div className="info-bottom">
         <div className="info-text">
-          <h1>Easily join our team of incredible developers</h1>
+          <h1>Help teach others the path to success</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit mauris,
             gravida senectus proin neque. Ultricies at urna non massa.

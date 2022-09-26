@@ -1,28 +1,40 @@
-import React from "react";
-import { NavContainer, LogoHolder, Nav } from "./styling/Navbar.styled";
+import React, { useState } from "react";
+import {
+  NavbarContainer,
+  NavLogo,
+  Nav,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLinks,
+} from "./styling/Navbar.styled";
+import { FaBars } from "react-icons/fa";
 
-export const Navbar = () => {
+export const Navbar = ({ toggle }) => {
   return (
-    <NavContainer>
-      <LogoHolder>
-        <h1>Axios.io</h1>
-      </LogoHolder>
-      <nav className="nav">
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Services</a>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </NavContainer>
+    <>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo>Axios.io</NavLogo>
+          <MobileIcon onClick={toggle}>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLinks>Home</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks>Services</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks>About Us</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks>Contact</NavLinks>
+            </NavItem>
+          </NavMenu>
+        </NavbarContainer>
+      </Nav>
+    </>
   );
 };
