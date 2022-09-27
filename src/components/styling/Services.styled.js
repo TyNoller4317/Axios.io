@@ -108,6 +108,8 @@ export const ServicesCard = styled.div`
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
+  background-color: #fff;
+  color: ${({ theme }) => theme.secText};
 
   &:hover {
     transform: scale(1.05);

@@ -29,7 +29,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(Link)`
-  color: #000;
+  color: ${({ theme }) => theme.text};
   justify-self: flex-start;
   cursor: pointer;
   display: flex;
@@ -69,7 +69,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-  color: #727272;
+  color: ${({ theme }) => theme.text};
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -80,5 +80,53 @@ export const NavLinks = styled(Link)`
 
   &.active {
     border-bottom: 3px solid #01bf71;
+  }
+`;
+
+export const ThemeChanger = styled.div`
+  width: 50px;
+  height: 15px;
+  background-color: ${({ theme }) => theme.text};
+  margin-top: 33px;
+  margin-left: 15px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:after {
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    border-radius: 2px;
+    top: 15%;
+    right: 5%;
+    background-color: ${({ theme }) => theme.body};
+  }
+`;
+
+export const ThemeChanger2 = styled.div`
+  width: 50px;
+  height: 15px;
+  background-color: ${({ theme }) => theme.text};
+  margin-top: 33px;
+  margin-left: 15px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:after {
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    border-radius: 2px;
+    top: 15%;
+    left: 5%;
+    background-color: ${({ theme }) => theme.body};
   }
 `;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   height: 442px;
-  background-color: #2c2c2c;
+  background-color: #121620;
   padding: 75px 100px;
   color: white;
 

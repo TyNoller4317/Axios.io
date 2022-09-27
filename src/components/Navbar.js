@@ -6,12 +6,14 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
+  ThemeChanger,
   NavLinks,
+  ThemeChanger2,
 } from "./styling/Navbar.styled";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
-export const Navbar = ({ toggle }) => {
+export const Navbar = ({ toggle, themeToggle, dark }) => {
   return (
     <>
       <Nav>
@@ -33,6 +35,13 @@ export const Navbar = ({ toggle }) => {
             </NavItem>
             <NavItem>
               <NavLinks to="/contact">Contact</NavLinks>
+            </NavItem>
+            <NavItem>
+              {dark ? (
+                <ThemeChanger onClick={themeToggle} />
+              ) : (
+                <ThemeChanger2 onClick={themeToggle} />
+              )}
             </NavItem>
           </NavMenu>
         </NavbarContainer>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DiscountContainer = styled.div`
   height: 500px;
-  background-color: ${(props) => props.theme.colors.yellow};
+  background-color: ${({ theme }) => theme.secondary};
   margin-top: 75px;
   display: flex;
   align-items: center;
@@ -19,6 +19,7 @@ export const DiscountContainer = styled.div`
 export const DiscountText = styled.div`
   & > h1 {
     font-size: 42px;
+    color: ${({ theme }) => theme.secText};
   }
 
   & > p {

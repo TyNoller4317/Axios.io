@@ -128,7 +128,7 @@ select {
   width: 187px;
   height: 50px;
   font-weight: bold;
-  background: #faedcd;
+  background: transparent;
   border-radius: 10px;
   border: 1px solid #000; 
   cursor: pointer;
@@ -144,34 +144,6 @@ select {
 }
 
 /* Info section styling */
-.info-container {
-  height: 990px;
-  margin-top: 100px;
-  background-color: #FAEDCD;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 100px;
-}
-
-
-.info-container h1{ 
-  font-size: 42px;
-  max-width: 397px;
-}
-
-.info-container p {
-  font-size: 18px;
-  max-width: 350px;
-  color: #767676
-}
-
-.info-container img {
-  width: 500px;
-  height: 350px;
-}
-
 .info-top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

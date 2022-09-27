@@ -9,26 +9,41 @@ import { Services } from "../Services";
 import { Discount } from "../Discount";
 import Sidebar from "../Sidebar";
 
-import Theme from "../../Theme";
+import Theme, { darkTheme, GlobalStyles, lightTheme } from "../../Theme";
+import { ThemeProvider } from "styled-components";
 import styled from "styled-components";
 
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+  const [darkSwitch, setDarkSwitch] = useState(true);
+
+  const toggleDark = () => setDarkSwitch(!darkSwitch);
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
+    toggleDark();
+  };
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
   return (
-    <Theme>
-      <Navbar toggle={toggle} />
-      <Sidebar isOpen={isOpen} toggle={toggle} />
-      <HeroSection />
-      <MakesUsSpecial />
-      <InfoSection />
-      <Services />
-      <Discount />
-      <Footer />
-    </Theme>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <>
+        <GlobalStyles />
+        <Navbar toggle={toggle} themeToggle={toggleTheme} dark={darkSwitch} />
+        <Sidebar isOpen={isOpen} toggle={toggle} />
+        <HeroSection />
+        <MakesUsSpecial />
+        <InfoSection />
+        <Services />
+        <Discount />
+        <Footer />
+      </>
+    </ThemeProvider>
   );
 };
 

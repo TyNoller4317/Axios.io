@@ -44,6 +44,8 @@ export const SpecialCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff;
+  color: #000;
 
   & > h1 {
     align-self: flex-start;
