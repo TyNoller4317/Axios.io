@@ -11,6 +11,7 @@ export const SpecialContainer = styled.div`
     text-align: center;
     justify-items: center;
     align-content: center;
+    padding: 0 25px;
   }
 `;
 

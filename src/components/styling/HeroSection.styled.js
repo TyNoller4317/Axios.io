@@ -11,7 +11,7 @@ export const HeroSectionContainer = styled.div`
     grid-template-columns: 1fr;
     justify-items: center;
     align-content: center;
-    padding: 0;
+    padding: 0 25px;
   }
 `;
 
