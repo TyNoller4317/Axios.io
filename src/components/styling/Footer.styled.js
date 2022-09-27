@@ -8,6 +8,7 @@ export const FooterContainer = styled.footer`
 
   @media screen and (max-width: 960px) {
     height: 100%;
+    text-align: center;
   }
 `;
 
@@ -29,6 +30,10 @@ export const FooterLogoSection = styled.div`
   & > p {
     max-width: 370px;
     margin-top: 10px;
+  }
+
+  @media screen and (max-width: 960px) {
+    margin-bottom: 35px;
   }
 `;
 
@@ -83,10 +88,27 @@ export const FooterLinks = styled.div`
 
   & > p {
     margin-top: 15px;
-    max-width: 175px;
+  }
+
+  @media screen and (max-width: 960px) {
+    & > p {
+      text-align: center;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 35px;
+    }
+
+    &:nth-child(3) {
+      display: none;
+    }
   }
 `;
 
 export const BottomFooter = styled.div`
   margin-top: 100px;
+
+  @media screen and (max-width: 960px) {
+    margin-top: 50px;
+  }
 `;

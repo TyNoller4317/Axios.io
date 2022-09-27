@@ -15,6 +15,7 @@ export const lightTheme = {
   text: "#121620",
   secondary: "#faedcd",
   secText: "#121620",
+  greyText: "#727272",
 };
 
 export const darkTheme = {
@@ -22,6 +23,7 @@ export const darkTheme = {
   text: "#f1f1f1",
   secondary: "#f1f1f1",
   secText: "#121620",
+  greyText: "#e3e3e3",
 };
 
 // const Theme = ({ children }) => (

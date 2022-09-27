@@ -9,18 +9,19 @@ export const SpecialContainer = styled.div`
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
     text-align: center;
-    justify-content: center;
+    justify-items: center;
+    align-content: center;
   }
 `;
 
 export const SpecialText = styled.div`
   & > h2 {
     font-size: 34px;
-    max-width: 275px;
+    max-width: 100%;
   }
 
   & > p {
-    color: #767676;
+    color: ${({ theme }) => theme.greyText};
     max-width: 80%;
     margin-top: 10px;
   }

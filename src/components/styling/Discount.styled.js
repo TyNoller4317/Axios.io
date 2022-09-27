@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
 export const DiscountContainer = styled.div`
-  height: 500px;
   background-color: ${({ theme }) => theme.secondary};
   margin-top: 75px;
-  display: flex;
-  align-items: center;
-  padding: 0 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+  padding: 75px 100px;
 
   @media screen and (max-width: 960px) {
-    flex-direction: column;
-    height: 100%;
-    padding: 25px 25px;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 `;
@@ -32,7 +31,14 @@ export const DiscountText = styled.div`
   }
 `;
 
-export const ButtonContainer = styled.div``;
+export const ButtonContainer = styled.div`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 export const DiscountImg = styled.div`
   margin-left: 150px;

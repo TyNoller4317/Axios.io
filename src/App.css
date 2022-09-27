@@ -143,38 +143,8 @@ select {
   border: none;
 }
 
-/* Info section styling */
-.info-top {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
-}
-
-.info-top img {
-  align-self: flex-start;
-}
-
-.info-bottom {
-  display: grid;
-  margin-top: 50px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 50px;
-}
-
-
 @media screen and (max-width: 960px) {
-  .info-container{
-    height: 100%;
-    padding: 50px 15px;
-    text-align: center;
-  }
-
-  .info-top {
-    grid-template-columns: 1fr;
-  }
-
-  .info-bottom {
-    grid-template-columns: 1fr;
+  .btn-clear {
+    margin-left: 0;
   }
 }
-/* End Info section styling */

@@ -15,8 +15,8 @@ export const ServicesText = styled.div`
   }
 
   & > p {
-    color: #767676;
-    max-width: 597px;
+    color: ${({ theme }) => theme.greyColor};
+    max-width: 500px;
     text-align: center;
   }
 `;

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const HeroSectionContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 0 100px;
   align-items: center;
   margin-top: 50px;
 
   @media screen and (max-width: 960px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 `;
 
@@ -19,12 +20,17 @@ export const LeftSide = styled.div`
   }
 
   & > p {
-    color: #767676;
+    color: ${({ theme }) => theme.greyText};
     margin-top: 15px;
-    max-width: 445px;
+    max-width: 718px;
   }
 
   @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     & > h1 {
       font-size: 42px;
       line-height: 50px;
@@ -38,8 +44,12 @@ export const LeftSide = styled.div`
 `;
 
 export const RightSide = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
   & > img {
-    width: 68%;
+    width: 70%;
   }
 
   @media screen and (max-width: 960px) {
