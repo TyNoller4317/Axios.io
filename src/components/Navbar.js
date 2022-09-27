@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   NavbarContainer,
   NavLogo,
@@ -10,7 +10,6 @@ import {
   NavLinks,
   ThemeChanger2,
 } from "./styling/Navbar.styled";
-import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 
 export const Navbar = ({ toggle, themeToggle, dark }) => {

@@ -1,5 +1,4 @@
 import React from "react";
-import TestImg from "../images/hero.svg";
 import TestImg2 from "../images/info1.png";
 import TestImg3 from "../images/info2.png";
 import { Button } from "./Button";

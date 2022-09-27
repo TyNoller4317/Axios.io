@@ -9,6 +9,8 @@ export const HeroSectionContainer = styled.div`
 
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
   }
 `;
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import TestImage from "../images/hero.svg";
 import Engineer from "../images/engineering.svg";
 import Drone from "../images/drone.svg";

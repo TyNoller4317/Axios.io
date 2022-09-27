@@ -1,5 +1,3 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`

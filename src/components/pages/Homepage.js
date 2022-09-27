@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "../Navbar";
 import { HeroSection } from "../HeroSection";
 import { MakesUsSpecial } from "../MakesUsSpecial";
@@ -9,15 +9,20 @@ import { Services } from "../Services";
 import { Discount } from "../Discount";
 import Sidebar from "../Sidebar";
 
-import Theme, { darkTheme, GlobalStyles, lightTheme } from "../../Theme";
+import { darkTheme, GlobalStyles, lightTheme } from "../../Theme";
 import { ThemeProvider } from "styled-components";
-import styled from "styled-components";
 
 const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("dark-mode"));
   const isDarkTheme = theme === "dark";
   const [darkSwitch, setDarkSwitch] = useState(true);
+
+  useEffect(() => {
+    localStorage.setItem("dark-mode", theme);
+  }, [theme]);
+
+  console.log(theme);
 
   const toggleDark = () => setDarkSwitch(!darkSwitch);
 

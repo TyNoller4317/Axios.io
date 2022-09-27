@@ -9,7 +9,6 @@ import {
   Changer2,
 } from "./styling/Services.styled";
 import Img from "../images/hero.svg";
-import Buddies from "../images/buddies.svg";
 import Cloud from "../images/cloud.svg";
 import Educator from "../images/educator.svg";
 import Engineer from "../images/engineering.svg";
