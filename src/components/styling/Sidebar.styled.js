@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const SideBarContainer = styled.aside`
   position: fixed;
@@ -34,7 +35,7 @@ export const SideBarWrapper = styled.div`
   color: #fff;
 `;
 
-export const SideBarLink = styled.a`
+export const SideBarLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

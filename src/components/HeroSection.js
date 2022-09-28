@@ -3,30 +3,54 @@ import { Link } from "react-router-dom";
 import HeroImage from "../images/hero.svg";
 import {
   HeroSectionContainer,
+  HeroSectionContainerReverse,
   LeftSide,
+  LeftSideReverse,
   RightSide,
+  RightSideReverse,
 } from "./styling/HeroSection.styled";
 import { Button } from "./Button";
 
-export const HeroSection = () => {
-  return (
+export const HeroSection = ({
+  title,
+  message,
+  buttonDisplay,
+  reverse,
+  btnText,
+}) => {
+  return !reverse ? (
     <>
       <HeroSectionContainer>
         <LeftSide>
-          <h1>Making tasks easier for everyday individuals</h1>
-          <p>
-            We have developed a task application that helps individuals plan and
-            execute important tasks. Our task editor is number one when it comes
-            useability and friendliness.
-          </p>
-          <Link to="/about">
-            <Button value="Learn More" styleClass="btn-large" />
-          </Link>
+          <h1>{title}</h1>
+          <p>{message}</p>
+          {buttonDisplay && (
+            <Link to="/about">
+              <Button value={btnText} styleClass="btn-large" />
+            </Link>
+          )}
         </LeftSide>
         <RightSide>
           <img src={HeroImage} alt="Hero Image" />
         </RightSide>
       </HeroSectionContainer>
+    </>
+  ) : (
+    <>
+      <HeroSectionContainerReverse>
+        <RightSideReverse>
+          <img src={HeroImage} alt="Hero Image" />
+        </RightSideReverse>
+        <LeftSideReverse>
+          <h1>{title}</h1>
+          <p>{message}</p>
+          {buttonDisplay && (
+            <Link to="/about">
+              <Button value={btnText} styleClass="btn-large" />
+            </Link>
+          )}
+        </LeftSideReverse>
+      </HeroSectionContainerReverse>
     </>
   );
 };

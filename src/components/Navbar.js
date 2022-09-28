@@ -12,12 +12,12 @@ import {
 } from "./styling/Navbar.styled";
 import { FaBars } from "react-icons/fa";
 
-export const Navbar = ({ toggle, themeToggle, dark }) => {
+export const Navbar = ({ toggle, themeToggle, dark, title }) => {
   return (
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Axios.io</NavLogo>
+          <NavLogo to="/">{title}</NavLogo>
 
           <MobileIcon onClick={toggle}>
             <FaBars />

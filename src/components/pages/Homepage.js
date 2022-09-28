@@ -6,7 +6,7 @@ import { MakesUsSpecial } from "../MakesUsSpecial";
 import { InfoSection } from "../InfoSection";
 import { Footer } from "../Footer";
 import { Services } from "../Services";
-import { Discount } from "../Discount";
+import { Banner } from "../Banner";
 import Sidebar from "../Sidebar";
 
 import { darkTheme, GlobalStyles, lightTheme } from "../../Theme";
@@ -16,7 +16,7 @@ const Homepage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("dark-mode"));
   const isDarkTheme = theme === "dark";
-  const [darkSwitch, setDarkSwitch] = useState(true);
+  const [darkSwitch, setDarkSwitch] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("dark-mode", theme);
@@ -39,13 +39,35 @@ const Homepage = () => {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <>
         <GlobalStyles />
-        <Navbar toggle={toggle} themeToggle={toggleTheme} dark={darkSwitch} />
+        <Navbar
+          toggle={toggle}
+          themeToggle={toggleTheme}
+          dark={darkSwitch}
+          title="Axios.io"
+        />
         <Sidebar isOpen={isOpen} toggle={toggle} />
-        <HeroSection />
+        <HeroSection
+          title="Making tasks easier for everyday individuals"
+          message="We have developed a task application that helps individuals plan and
+          execute important tasks. Our task editor is number one when it comes
+          useability and friendliness."
+          buttonDisplay={true}
+          reverse={false}
+          btnText="Learn More"
+        />
         <MakesUsSpecial />
         <InfoSection />
         <Services />
-        <Discount />
+        <Banner
+          title="Student Discount"
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placerat
+          fringilla nec morbi placerat arcu nunc feugiat. Enim et a, purus elit,
+          et, ipsum egestas sem. Quam volutpat mattis magna tincidunt porttitor.
+          Duis egestas urna arcu sed consequat.Enim et a, purus elit, et, ipsum
+          egestas sem. Quam volutpat mattis magna tincidunt porttitor. Duis
+          egestas urna arcu sed consequat."
+          buttonDisplay={true}
+        />
         <Footer />
       </>
     </ThemeProvider>
